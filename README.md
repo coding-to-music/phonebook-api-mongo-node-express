@@ -1,6 +1,6 @@
 # phonebook-api-mongo-node-express
 
-# 🚀 YYYYYYY 🚀
+# 🚀 Phonebook API service in NodeJS, Express and MongoDB 🚀
 
 https://github.com/coding-to-music/phonebook-api-mongo-node-express
 
