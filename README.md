@@ -1,6 +1,37 @@
+# phonebook-api-mongo-node-express
+
+# 🚀 YYYYYYY 🚀
+
+https://github.com/coding-to-music/phonebook-api-mongo-node-express
+
+From / By https://github.com/medaharrat
+
+https://github.com/medaharrat/phonebook-api
+
+## Environment variables:
+
+```java
+
+```
+
+## GitHub
+
+```java
+git init
+git add .
+git remote remove origin
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:coding-to-music/phonebook-api-mongo-node-express.git
+git push -u origin main
+```
+
 # Phonebook API
+
 ### Phonebook API service in NodeJS, Express and MongoDB
+
 ### Requirements
+
 Write a Javascript based server (preferably using NodeJS and Express) that acts as an API and provides Phonebook services.
 The phonebook should contain phone numbers and subscribers.
 For any subscriber, one or more phone numbers can be assigned.

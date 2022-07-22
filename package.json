@@ -1,8 +1,9 @@
 {
-  "name": "phonebook",
+  "name": "phonebook-api-mongo-node-express",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "deploy": "git add . && git commit -m Build && git push",
     "start": "nodemon app"
   },
   "dependencies": {
