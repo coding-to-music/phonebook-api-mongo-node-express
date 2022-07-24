@@ -51,3 +51,32 @@ Your API server should accept the following html requests:
 
 Provide an example input for the requests you were able to finish during the homework in a text file.
 Write clean, well-organized, self documenting code.
+
+## Jade has been renamed Pug
+
+```
+npm uninstall jade
+
+npm install pug
+
+npm install pug-cli -g
+
+npm uninstall pug
+
+npm install jade
+
+```
+
+## Run the docker file
+
+```
+docker build - < Dockerfile
+
+docker image ls  (note your image#)
+
+docker tag 123456789 yourname/projectname-image
+
+docker run 123456789
+
+docker-compose up
+```

@@ -1,5 +1,5 @@
 # Using node v15.x
-FROM node:15
+FROM node:16
 
 # Set server home
 RUN mkdir -p /usr/src/app
