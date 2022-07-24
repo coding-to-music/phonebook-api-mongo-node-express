@@ -9,6 +9,7 @@ WORKDIR /usr/src/app
 COPY . .
 
 # Install dependencies
+# RUN ls -l
 RUN npm install
 
 # Expose ports

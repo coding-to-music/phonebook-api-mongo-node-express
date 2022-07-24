@@ -66,10 +66,28 @@ npm uninstall pug
 npm install jade
 ```
 
+## copy config.json-example to config.json
+
+```
+cp config.json-example config.json
+
+# adjust the values in config.json
+```
+
 ## Run the docker file
 
 ```
+# Appareently this is all that is needed:
+docker-compose up
+
+# This is best:
+docker build -f ./Dockerfile .
+
+# This did not work, it is missing context and so the copy file command did not work:
 docker build - < Dockerfile
+
+# Other interesting commands:
+docker build .
 
 docker image ls  (note your image#)
 
@@ -78,4 +96,89 @@ docker tag 123456789 yourname/projectname-image
 docker run 123456789
 
 docker-compose up
+```
+
+## Was using an old image, so clean them up so they will be built fresh
+
+```
+df -h
+
+docker image list
+
+docker system df
+
+docker container list
+
+docker image help
+
+docker image prune
+
+df -h
+
+docker volume ls
+
+docker volume help
+
+# Prune unused volumes
+
+docker volume prune
+
+# Prune images that now are unneeded, not connected to volumes or containers
+
+docker image prune -a
+
+df -h
+```
+
+## requests for testing (from requests.http file)
+
+```
+VSC React Client Test
+
+###
+# Create a new user
+POST http://localhost:8000/api/subscribers/create
+curl -X POST -H "Content-Type: application/json" -d '{"name": "linuxize", "phone": "0123456789"}' http://localhost:8000/api/subscribers/create
+Content-Type: application/json
+{
+    "name": "linuxize",
+    "phone": "0123456789"
+}
+
+###
+# Create the same user with a different number
+POST http://localhost:8000/api/subscribers/create
+curl -X POST -H "Content-Type: application/json" -d '{"name": "linuxize", "phone": "1234567890"}' http://localhost:8000/api/subscribers/create
+Content-Type: application/json
+{
+    "name": "linuxize",
+    "phone": "1234567890"
+}
+
+###
+# Get all records
+GET http://localhost:8000/api/subscribers/
+curl http://localhost:8000/api/subscribers/ -H "Accept: application/json"
+
+###
+# Get the name of the user by one of his phone numbers
+GET http://localhost:8000/api/subscribers/:phone
+curl http://localhost:8000/api/subscribers/0123456789 -H "Accept: application/json"
+
+###
+
+###
+# Get phone numbers by subscriber name
+GET http://localhost:8000/api/phones/:name
+curl http://localhost:8000/api/phones/linuxize -H "Accept: application/json"
+###
+
+###
+# Delete a subscriber with phone numbers assigned to it
+POST https://localhost:8000/subscribers/delete/
+curl -X POST -H "Content-Type: application/json" -d '{"name": "linuxize", "number": "1234567890"}' http://localhost:8000/api/subscribers/delete
+{
+    "name": "linuxize",
+    "number": "0123456789"
+}
 ```
