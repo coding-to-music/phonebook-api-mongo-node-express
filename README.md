@@ -64,7 +64,6 @@ npm install pug-cli -g
 npm uninstall pug
 
 npm install jade
-
 ```
 
 ## Run the docker file
