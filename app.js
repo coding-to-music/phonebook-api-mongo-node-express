@@ -30,7 +30,7 @@ const app = express();
 // View engine setup
 app.set("port", config.server.port);
 app.set('views', path.join(__dirname, 'views'));
-app.set("view engine", "jade");
+app.set("view engine", "pug");
 app.use(express.json())
 app.use(config.server.publicUrl, express.static(config.server.public))
 console.log("[>] Express server initialized.");

@@ -182,3 +182,31 @@ curl -X POST -H "Content-Type: application/json" -d '{"name": "linuxize", "numbe
     "number": "0123456789"
 }
 ```
+
+## Landing page looks like this
+
+```
+## Phonebook API
+### Endpoints
+
+GET: Get all subscribers and their phone numbers
+/api/subscribers/
+
+GET: Get a subscriber's name by a phone number
+/api/subscribers/:phone
+
+POST: Create a new subscriber
+/api/subscribers/create
+
+POST: Delete an existing subscriber
+/api/subscribers/delete
+
+GET: Get phone numbers of a subscriber
+/api/subscribers/:name
+```
+
+## Getting this error in the web browser console
+
+```
+Refused to apply style from 'http://localhost:8000/stylesheets/style.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
+```
