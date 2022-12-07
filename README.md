@@ -4,6 +4,8 @@
 
 https://github.com/coding-to-music/phonebook-api-mongo-node-express
 
+https://phonebook-api-mongo-node-express.vercel.app/
+
 From / By https://github.com/medaharrat
 
 https://github.com/medaharrat/phonebook-api
@@ -11,6 +13,8 @@ https://github.com/medaharrat/phonebook-api
 ## Environment variables:
 
 ```java
+# This is not being used - config.json is being used
+MONGO_URI="mongodb+srv://userid:password@cluster0.host.mongodb.net/phonebook-api-mongo-node-express?retryWrites=true&w=majority"
 
 ```
 
