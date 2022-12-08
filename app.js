@@ -84,6 +84,6 @@ console.log("[>] Express routers initialized.");
 var server = http.createServer(app);
 
 server.listen(app.get("port"), () => {
-  console.log(`[>] Server running on port: http://localhost:` + port);
+  console.log(`[>] Server running on http://localhost:` + port);
   console.log("━━━━━━━━━━━━━━━━━━━ Runtime logs ━━━━━━━━━━━━━━━━━━━");
 });
