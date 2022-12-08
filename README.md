@@ -188,6 +188,27 @@ curl -X POST -H "Content-Type: application/json" -d '{"name": "linuxize", "numbe
 }
 ```
 
+## Works, can insert and query
+
+output:
+
+```
+[
+  {
+    "name": "linuxize",
+    "phone": [
+      {
+        "number": "1234567890"
+      },
+      {
+        "number": "0123456789"
+      }
+    ]
+  }
+]
+```
+
+
 ## Landing page looks like this
 
 ```
